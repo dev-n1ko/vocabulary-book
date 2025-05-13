@@ -1,0 +1,18 @@
+<h1>単語を新規作成</h1>
+
+<%= form_with model: @word, local: true do |form| %>
+  <div>
+    <%= form.label :name, "単語" %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :explanation, "意味" %><br>
+    <%= form.text_area :explanation %>
+  </div>
+
+  <div>
+    <%= form.submit "登録する" %>
+  </div>
+<% end %>
+

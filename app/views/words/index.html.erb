@@ -1,0 +1,25 @@
+<h1>単語一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>単語</th>
+      <th>意味</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @words.each do |word| %>
+      <tr>
+        <td><%= word.name %></td>
+        <td><%= word.explanation %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
