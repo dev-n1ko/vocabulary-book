@@ -3,12 +3,12 @@
 <%= form_with model: @word, local: true do |form| %>
   <div>
     <%= form.label :name, "単語" %><br>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "large-input" %>
   </div>
 
   <div>
     <%= form.label :explanation, "意味" %><br>
-    <%= form.text_area :explanation %>
+    <%= form.text_area :explanation, class: "large-textarea" %>
   </div>
 
   <div>
