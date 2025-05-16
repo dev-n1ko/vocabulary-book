@@ -1,0 +1,35 @@
+<h1>単語を編集</h1>
+
+<%= form_with(model: @word, local: true) do |form| %>
+  <% if @word.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@word.errors.count, "エラー") %> が発生しました:</h2>
+      <ul>
+        <% @word.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "単語" %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <p>
+    <strong>ID:</strong>
+    <%= @word.id %>
+  </p>
+
+  <div class="field">
+    <%= form.label :explanation, "意味" %><br>
+    <%= form.text_area :explanation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "更新する" %>
+  </div>
+<% end %>
+
+<%= link_to '戻る', word_path(@word), class: "btn btn-secondary" %>

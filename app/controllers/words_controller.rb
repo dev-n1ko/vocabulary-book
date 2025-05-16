@@ -13,6 +13,30 @@ class WordsController < ApplicationController
     @word = Word.new
   end
 
+  def show
+    @word = Word.find(params[:id])
+  end
+
+  def edit
+    @word = Word.find(params[:id])
+  end
+
+  def update
+    @word = Word.find(params[:id])
+    if @word.update(word_params)
+      redirect_to @word, notice: "単語を更新しました。"
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def word_params
+    params.require(:word).permit(:name, :explanation)
+  end
+
+
   def create
     @word = Word.new(word_params)
     if @word.save
