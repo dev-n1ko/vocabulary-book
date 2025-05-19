@@ -30,13 +30,6 @@ class WordsController < ApplicationController
     end
   end
 
-  private
-
-  def word_params
-    params.require(:word).permit(:name, :explanation)
-  end
-
-
   def create
     @word = Word.new(word_params)
     if @word.save
@@ -45,8 +38,6 @@ class WordsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
-
-  private
 
   def word_params
     params.require(:word).permit(:name, :explanation)

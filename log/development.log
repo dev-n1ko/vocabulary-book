@@ -2845,3 +2845,2368 @@ Processing by WordsController#new as HTML
 Completed 200 OK in 39ms (Views: 28.7ms | ActiveRecord: 0.0ms | Allocations: 2851)
 
 
+Started GET "/" for ::1 at 2025-05-16 22:06:06 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.8ms | Allocations: 386)
+Completed 200 OK in 576ms (Views: 132.1ms | ActiveRecord: 0.0ms | Allocations: 7275)
+
+
+Started GET "/words/search" for ::1 at 2025-05-16 22:06:21 +0900
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered words/search.html.erb within layouts/application (Duration: 46.8ms | Allocations: 1403)
+  Rendered layout layouts/application.html.erb (Duration: 1249.5ms | Allocations: 34032)
+Completed 200 OK in 1284ms (Views: 1274.6ms | ActiveRecord: 0.0ms | Allocations: 35169)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:06:26 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  Rendered words/index.html.erb within layouts/application (Duration: 43.4ms | Allocations: 2099)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 2208)
+Completed 500 Internal Server Error in 532ms (ActiveRecord: 0.0ms | Allocations: 10969)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>単語一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>単語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @words.each do |word| %>
+      <tr>
+        <td><%= word.id %></td>
+        <td><%= word.name %></td>
+        <%= link_to word.name,  %>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+):
+1:    <h1>単語一覧</h1>
+2:    
+3:    <table>
+4:      <thead>
+5:        <tr>
+6:          <th>ID</th>
+7:          <th>単語</th>
+8:        </tr>
+9:      </thead>
+10:      <tbody>
+11:        <% @words.each do |word| %>
+12:          <tr>
+13:            <td><%= word.id %></td>
+14:            <td><%= word.name %></td>
+15:            <%= link_to word.name,  %>
+16:    
+17:          </tr>
+18:        <% end %>
+19:      </tbody>
+20:    </table>
+  
+app/views/words/index.html.erb:15: syntax error, unexpected ')'
+app/views/words/index.html.erb:18: syntax error, unexpected `end', expecting ')'
+app/views/words/index.html.erb:30: syntax error, unexpected `end', expecting ')'
+Started GET "/words" for ::1 at 2025-05-16 22:07:08 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  Rendered words/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1312)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms | Allocations: 3167)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>単語一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>単語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @words.each do |word| %>
+      <tr>
+        <td><%= word.id %></td>
+        <td><%= word.name %></td>
+        <%= link_to "word.name",  %>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+):
+1:    <h1>単語一覧</h1>
+2:    
+3:    <table>
+4:      <thead>
+5:        <tr>
+6:          <th>ID</th>
+7:          <th>単語</th>
+8:        </tr>
+9:      </thead>
+10:      <tbody>
+11:        <% @words.each do |word| %>
+12:          <tr>
+13:            <td><%= word.id %></td>
+14:            <td><%= word.name %></td>
+15:            <%= link_to "word.name",  %>
+16:    
+17:          </tr>
+18:        <% end %>
+19:      </tbody>
+20:    </table>
+  
+app/views/words/index.html.erb:15: syntax error, unexpected ')'
+app/views/words/index.html.erb:18: syntax error, unexpected `end', expecting ')'
+app/views/words/index.html.erb:30: syntax error, unexpected `end', expecting ')'
+Started GET "/words" for ::1 at 2025-05-16 22:07:35 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:11
+  Rendered words/index.html.erb within layouts/application (Duration: 101.9ms | Allocations: 9655)
+  Rendered layout layouts/application.html.erb (Duration: 109.5ms | Allocations: 12500)
+Completed 200 OK in 161ms (Views: 47.1ms | ActiveRecord: 76.1ms | Allocations: 14325)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:08:58 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  Rendered words/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1202)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1303)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms | Allocations: 3156)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>単語一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>単語</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @words.each do |word| %>
+      <tr>
+        <td><%= word.id %></td>
+        <%= link_to
+          <td><%= word.name %></td>
+        ,search_words_path  %>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+):
+1:    <h1>単語一覧</h1>
+2:    
+3:    <table>
+4:      <thead>
+5:        <tr>
+6:          <th>ID</th>
+7:          <th>単語</th>
+8:        </tr>
+9:      </thead>
+10:      <tbody>
+11:        <% @words.each do |word| %>
+12:          <tr>
+13:            <td><%= word.id %></td>
+14:            <%= link_to
+15:              <td><%= word.name %></td>
+16:            ,search_words_path  %>
+17:    
+18:          </tr>
+19:        <% end %>
+20:      </tbody>
+21:    </table>
+  
+app/views/words/index.html.erb:15: syntax error, unexpected '<', expecting ')'
+app/views/words/index.html.erb:19: syntax error, unexpected `end', expecting ')'
+app/views/words/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+Started GET "/words" for ::1 at 2025-05-16 22:11:57 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:10
+  Rendered words/index.html.erb within layouts/application (Duration: 67.0ms | Allocations: 9487)
+  Rendered layout layouts/application.html.erb (Duration: 70.4ms | Allocations: 9572)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 26.1ms | Allocations: 11379)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000001a3d8>
+
+        '.freeze; @output_buffer.append=( link_to word.name, word_path(user) ); @output_buffer.safe_append='<br>
+                                                                       ^^^^
+Did you mean?  super):
+     9:   <tbody>
+    10:     <% @words.each do |word| %>
+    11:       <tr>
+    12:         <%= link_to word.name, word_path(user) %><br>
+    13:       </tr>
+    14:     <% end %>
+    15:   </tbody>
+  
+app/views/words/index.html.erb:12
+app/views/words/index.html.erb:10
+Started GET "/words" for ::1 at 2025-05-16 22:12:37 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (1.6ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:10
+  Rendered words/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 9419)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 9504)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 6.5ms | Allocations: 11306)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000001e0f0>
+
+ @output_buffer.safe_append='        '.freeze; @output_buffer.append=( link_to word.name, word_path(user) ); @output_buffer.safe_append='
+                                                                                                    ^^^^
+Did you mean?  super):
+     8:   </thead>
+     9:   <tbody>
+    10:     <% @words.each do |word| %>
+    11:         <%= link_to word.name, word_path(user) %>
+    12:     <% end %>
+    13:   </tbody>
+    14: </table>
+  
+app/views/words/index.html.erb:11
+app/views/words/index.html.erb:10
+Started GET "/words" for ::1 at 2025-05-16 22:13:16 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:10
+  Rendered words/index.html.erb within layouts/application (Duration: 30.3ms | Allocations: 5880)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 8679)
+Completed 200 OK in 106ms (Views: 56.8ms | ActiveRecord: 6.7ms | Allocations: 10505)
+
+
+Started GET "/words/search" for ::1 at 2025-05-16 22:13:22 +0900
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered words/search.html.erb within layouts/application (Duration: 10.3ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 3233)
+Completed 200 OK in 67ms (Views: 57.9ms | ActiveRecord: 0.0ms | Allocations: 3565)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:13:57 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.9ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:10
+  Rendered words/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 5826)
+  Rendered layout layouts/application.html.erb (Duration: 39.8ms | Allocations: 8615)
+Completed 200 OK in 96ms (Views: 54.6ms | ActiveRecord: 5.7ms | Allocations: 10446)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:14:51 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.6ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:10
+  Rendered words/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 5881)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 8678)
+Completed 200 OK in 106ms (Views: 55.5ms | ActiveRecord: 5.7ms | Allocations: 10504)
+
+
+Started GET "/words/search" for ::1 at 2025-05-16 22:15:04 +0900
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered words/search.html.erb within layouts/application (Duration: 3.1ms | Allocations: 987)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 3193)
+Completed 200 OK in 53ms (Views: 39.8ms | ActiveRecord: 0.0ms | Allocations: 3525)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:15:43 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:10
+  Rendered words/index.html.erb within layouts/application (Duration: 20.8ms | Allocations: 5840)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 8631)
+Completed 200 OK in 100ms (Views: 50.7ms | ActiveRecord: 5.4ms | Allocations: 10457)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:16:20 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.6ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 26.2ms | Allocations: 5814)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 8593)
+Completed 200 OK in 90ms (Views: 43.6ms | ActiveRecord: 5.9ms | Allocations: 10419)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:16:39 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 5876)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 8658)
+Completed 200 OK in 90ms (Views: 36.8ms | ActiveRecord: 5.9ms | Allocations: 10484)
+
+
+Started GET "/wordhoaj" for ::1 at 2025-05-16 22:17:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/wordhoaj"):
+  
+Started GET "/words/search" for ::1 at 2025-05-16 22:24:28 +0900
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered words/search.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1014)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 3815)
+Completed 200 OK in 52ms (Views: 43.4ms | ActiveRecord: 0.0ms | Allocations: 4896)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:33:02 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.9ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 26.9ms | Allocations: 6159)
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 6244)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 9.9ms | Allocations: 8054)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"words"}, missing required keys: [:id]):
+    4:   <tbody>
+    5:     <% @words.each do |word| %>
+    6:       <p>
+    7:         <%= link_to word.name, word_path %>
+    8:       </p>
+    9:     <% end %>
+   10:   </tbody>
+  
+app/views/words/index.html.erb:7
+app/views/words/index.html.erb:5
+Started GET "/words" for ::1 at 2025-05-16 22:34:00 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.7ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 36.0ms | Allocations: 6150)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 8937)
+Completed 200 OK in 125ms (Views: 60.8ms | ActiveRecord: 14.3ms | Allocations: 10761)
+
+
+Started GET "/words/1" for ::1 at 2025-05-16 22:34:05 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 351)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 2782)
+Completed 200 OK in 181ms (Views: 34.9ms | ActiveRecord: 0.3ms | Allocations: 5926)
+
+
+Started GET "/words/1/edit" for ::1 at 2025-05-16 22:34:08 +0900
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering words/edit.html.erb within layouts/application
+  Rendered words/edit.html.erb within layouts/application (Duration: 1.5ms | Allocations: 78)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 2323)
+Completed 200 OK in 53ms (Views: 27.7ms | ActiveRecord: 0.0ms | Allocations: 2639)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:34:19 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2399)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 4621)
+Completed 200 OK in 41ms (Views: 33.9ms | ActiveRecord: 0.4ms | Allocations: 4886)
+
+
+Started GET "/words/1" for ::1 at 2025-05-16 22:38:06 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 3171)
+Completed 200 OK in 87ms (Views: 40.4ms | ActiveRecord: 19.8ms | Allocations: 9568)
+
+
+Started GET "/words/1/edit" for ::1 at 2025-05-16 22:38:11 +0900
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering layout layouts/application.html.erb
+  Rendering words/edit.html.erb within layouts/application
+  Rendered words/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2324)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 2405)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 0.0ms | Allocations: 2737)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass
+
+'.freeze;   if @word.errors.any? 
+                    ^^^^^^^):
+    1: <h1>単語を編集</h1>
+    2: 
+    3: <%= form_with(model: @word, local: true) do |form| %>
+    4:   <% if @word.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2><%= pluralize(@word.errors.count, "エラー") %> が発生しました:</h2>
+    7:       <ul>
+  
+app/views/words/edit.html.erb:4
+app/views/words/edit.html.erb:3
+Started GET "/words/1/edit" for ::1 at 2025-05-16 22:40:52 +0900
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering words/edit.html.erb within layouts/application
+  Rendered words/edit.html.erb within layouts/application (Duration: 63.1ms | Allocations: 1838)
+  Rendered layout layouts/application.html.erb (Duration: 90.0ms | Allocations: 4411)
+Completed 200 OK in 159ms (Views: 109.0ms | ActiveRecord: 21.1ms | Allocations: 10846)
+
+
+Started PATCH "/words/1" for ::1 at 2025-05-16 22:41:03 +0900
+Processing by WordsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"スタック", "explanation"=>"後入れ先出し。"}, "commit"=>"更新する", "id"=>"1"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:26:in `update'
+  [1m[36mWord Update (9.3ms)[0m  [1m[33mUPDATE "words" SET "explanation" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["explanation", "後入れ先出し。"], ["updated_at", "2025-05-16 13:41:03.596230"], ["id", 1]]
+  ↳ app/controllers/words_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (63.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:26:in `update'
+Redirected to http://localhost:3000/words/1
+Completed 302 Found in 103ms (ActiveRecord: 73.2ms | Allocations: 4736)
+
+
+Started GET "/words/1" for ::1 at 2025-05-16 22:41:03 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 319)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 2677)
+Completed 200 OK in 58ms (Views: 40.4ms | ActiveRecord: 0.2ms | Allocations: 3583)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:41:07 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2622)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 4834)
+Completed 200 OK in 43ms (Views: 35.3ms | ActiveRecord: 0.4ms | Allocations: 5158)
+
+
+Started GET "/words/1" for ::1 at 2025-05-16 22:41:09 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 2303)
+Completed 200 OK in 32ms (Views: 18.7ms | ActiveRecord: 0.1ms | Allocations: 3085)
+
+
+Started GET "/words" for ::1 at 2025-05-16 22:41:11 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2394)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 4606)
+Completed 200 OK in 36ms (Views: 31.8ms | ActiveRecord: 0.3ms | Allocations: 4870)
+
+
+Started GET "/words/new" for ::1 at 2025-05-16 22:41:18 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 2830)
+Completed 200 OK in 36ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 3184)
+
+
+Started GET "/" for ::1 at 2025-05-17 22:30:38 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.4ms | Allocations: 386)
+Completed 200 OK in 542ms (Views: 109.1ms | ActiveRecord: 0.0ms | Allocations: 7275)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 22:44:21 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 129.0ms | Allocations: 2013)
+  Rendered layout layouts/application.html.erb (Duration: 1263.6ms | Allocations: 30307)
+Completed 200 OK in 1690ms (Views: 1364.1ms | ActiveRecord: 31.3ms | Allocations: 44428)
+
+
+Started POST "/words" for ::1 at 2025-05-17 22:46:10 +0900
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for WordsController):
+  
+actionpack (7.1.5.1) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.5.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.5.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.5.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.5.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.5.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.5.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.12) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.12) lib/rack/etag.rb:29:in `call'
+rack (3.1.12) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.12) lib/rack/head.rb:15:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.5.1) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.1) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.12) lib/rack/method_override.rb:28:in `call'
+rack (3.1.12) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.12) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.1) lib/rails/engine.rb:536:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/words" for ::1 at 2025-05-17 22:47:19 +0900
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for WordsController):
+  
+actionpack (7.1.5.1) lib/abstract_controller/base.rb:155:in `process'
+actionview (7.1.5.1) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.5.1) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.5.1) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.5.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.5.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.5.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.5.1) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.1.12) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.1.12) lib/rack/etag.rb:29:in `call'
+rack (3.1.12) lib/rack/conditional_get.rb:43:in `call'
+rack (3.1.12) lib/rack/head.rb:15:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:274:in `context'
+rack-session (2.1.0) lib/rack/session/abstract/id.rb:268:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.5.1) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.5.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.5.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `block in tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.5.1) lib/active_support/tagged_logging.rb:139:in `tagged'
+activesupport (7.1.5.1) lib/active_support/broadcast_logger.rb:241:in `method_missing'
+railties (7.1.5.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.5.2) lib/sprockets/rails/quiet_assets.rb:17:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.1.12) lib/rack/method_override.rb:28:in `call'
+rack (3.1.12) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.1.12) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.5.1) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.5.1) lib/rails/engine.rb:536:in `call'
+puma (6.6.0) lib/puma/configuration.rb:279:in `call'
+puma (6.6.0) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.0) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.0) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.0) lib/puma/server.rb:472:in `process_client'
+puma (6.6.0) lib/puma/server.rb:254:in `block in run'
+puma (6.6.0) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/words" for ::1 at 2025-05-17 22:50:19 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"原子性", "explanation"=>"ACIDのAtomicity。\r\nトランザクションはすべて完了もしくは全く処理されていないかの2択。中途半端な処理は実施しない。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (17.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "原子性"], ["explanation", "ACIDのAtomicity。\r\nトランザクションはすべて完了もしくは全く処理されていないかの2択。中途半端な処理は実施しない。"], ["count", nil], ["created_at", "2025-05-17 13:50:24.672919"], ["updated_at", "2025-05-17 13:50:24.672919"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (26.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 712ms (ActiveRecord: 46.9ms | Allocations: 12475)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 22:50:24 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1025)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 3562)
+Completed 200 OK in 46ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 4597)
+
+
+Started GET "/words" for ::1 at 2025-05-17 22:50:32 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 2959)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 5386)
+Completed 200 OK in 425ms (Views: 44.4ms | ActiveRecord: 0.5ms | Allocations: 7949)
+
+
+Started POST "/words" for ::1 at 2025-05-17 22:55:48 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"一貫性", "explanation"=>"ACIDのConsistency\r\nデータベースの内容に矛盾がないこと"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (4.1ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "一貫性"], ["explanation", "ACIDのConsistency\r\nデータベースの内容に矛盾がないこと"], ["count", nil], ["created_at", "2025-05-17 13:55:53.200504"], ["updated_at", "2025-05-17 13:55:53.200504"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (64.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 127ms (ActiveRecord: 82.9ms | Allocations: 6877)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 22:55:53 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1039)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3575)
+Completed 200 OK in 49ms (Views: 38.8ms | ActiveRecord: 0.0ms | Allocations: 4620)
+
+
+Started POST "/words" for ::1 at 2025-05-17 22:56:59 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"隔離性", "explanation"=>"ACIDのIsolation\r\nトランザクションがほかのトランザクションに影響を与えず、複数実行しても出力が単体実行と等しくなること"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (7.7ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "隔離性"], ["explanation", "ACIDのIsolation\r\nトランザクションがほかのトランザクションに影響を与えず、複数実行しても出力が単体実行と等しくなること"], ["count", nil], ["created_at", "2025-05-17 13:56:59.713631"], ["updated_at", "2025-05-17 13:56:59.713631"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 34ms (ActiveRecord: 8.5ms | Allocations: 2535)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 22:56:59 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 540)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 2588)
+Completed 200 OK in 56ms (Views: 48.4ms | ActiveRecord: 0.0ms | Allocations: 2868)
+
+
+Started POST "/words" for ::1 at 2025-05-17 22:57:37 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"耐久性", "explanation"=>"ACIDのDurability\r\n障害が発生してもデータが消失しないこと"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (12.7ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "耐久性"], ["explanation", "ACIDのDurability\r\n障害が発生してもデータが消失しないこと"], ["count", nil], ["created_at", "2025-05-17 13:57:37.566871"], ["updated_at", "2025-05-17 13:57:37.566871"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 33ms (ActiveRecord: 13.2ms | Allocations: 2383)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 22:57:37 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 567)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 2615)
+Completed 200 OK in 39ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 2885)
+
+
+Started POST "/words" for ::1 at 2025-05-17 22:58:32 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"専有ロック", "explanation"=>"排他制御の一つ。\r\n見る✖\r\n更新✖"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (8.7ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "専有ロック"], ["explanation", "排他制御の一つ。\r\n見る✖\r\n更新✖"], ["count", nil], ["created_at", "2025-05-17 13:58:32.846292"], ["updated_at", "2025-05-17 13:58:32.846292"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 30ms (ActiveRecord: 9.0ms | Allocations: 2366)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 22:58:32 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 534)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 2581)
+Completed 200 OK in 33ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 2848)
+
+
+Started POST "/words" for ::1 at 2025-05-17 22:58:58 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"共有ロック", "explanation"=>"排他制御の一つ。\r\n見る〇\r\n更新✖"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (12.5ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "共有ロック"], ["explanation", "排他制御の一つ。\r\n見る〇\r\n更新✖"], ["count", nil], ["created_at", "2025-05-17 13:58:59.103013"], ["updated_at", "2025-05-17 13:58:59.103013"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 33ms (ActiveRecord: 12.9ms | Allocations: 2372)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 22:58:59 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 2596)
+Completed 200 OK in 29ms (Views: 20.5ms | ActiveRecord: 0.0ms | Allocations: 2863)
+
+
+Started POST "/words" for ::1 at 2025-05-17 22:59:51 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"デッドロック", "explanation"=>"２つのトランザクションがお互いがロックをかけたデータベースを更新しようとして処理が止まること。強制終了させないと解除できない。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (11.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "デッドロック"], ["explanation", "２つのトランザクションがお互いがロックをかけたデータベースを更新しようとして処理が止まること。強制終了させないと解除できない。"], ["count", nil], ["created_at", "2025-05-17 13:59:52.229747"], ["updated_at", "2025-05-17 13:59:52.229747"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 40ms (ActiveRecord: 11.5ms | Allocations: 2369)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 22:59:52 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 534)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 2581)
+Completed 200 OK in 32ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 2848)
+
+
+Started GET "/words" for ::1 at 2025-05-17 23:01:42 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 2919)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 5149)
+Completed 200 OK in 71ms (Views: 54.0ms | ActiveRecord: 0.5ms | Allocations: 5520)
+
+
+Started GET "/words/56" for ::1 at 2025-05-17 23:01:45 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mWord Load (8.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 351)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 2772)
+Completed 200 OK in 130ms (Views: 25.6ms | ActiveRecord: 8.2ms | Allocations: 5840)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:02:17 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"ロックの粒度が小さい", "explanation"=>"(行単位)\r\nロックの競合は起きにくい。\r\nロック数が増えるので管理が大変\r\n\r\n"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (10.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ロックの粒度が小さい"], ["explanation", "(行単位)\r\nロックの競合は起きにくい。\r\nロック数が増えるので管理が大変\r\n\r\n"], ["count", nil], ["created_at", "2025-05-17 14:02:17.290253"], ["updated_at", "2025-05-17 14:02:17.290253"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 32ms (ActiveRecord: 12.1ms | Allocations: 2492)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:02:17 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 572)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 2623)
+Completed 200 OK in 27ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 2891)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:02:39 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"ロックの粒度が大きい", "explanation"=>"(データベース丸ごと)\r\nロックの競合が起きやすい。\r\nロック数は少ないので管理は簡単"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (3.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ロックの粒度が大きい"], ["explanation", "(データベース丸ごと)\r\nロックの競合が起きやすい。\r\nロック数は少ないので管理は簡単"], ["count", nil], ["created_at", "2025-05-17 14:02:39.871421"], ["updated_at", "2025-05-17 14:02:39.871421"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 33ms (ActiveRecord: 6.6ms | Allocations: 2393)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:02:39 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 2578)
+Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 2846)
+
+
+Started GET "/words/56" for ::1 at 2025-05-17 23:02:41 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 2307)
+Completed 200 OK in 41ms (Views: 29.5ms | ActiveRecord: 0.2ms | Allocations: 3089)
+
+
+Started GET "/words" for ::1 at 2025-05-17 23:02:44 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.8ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 49.8ms | Allocations: 2715)
+  Rendered layout layouts/application.html.erb (Duration: 85.3ms | Allocations: 4938)
+Completed 200 OK in 91ms (Views: 86.4ms | ActiveRecord: 0.7ms | Allocations: 5203)
+
+
+Started GET "/words/59" for ::1 at 2025-05-17 23:02:48 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 2305)
+Completed 200 OK in 38ms (Views: 21.9ms | ActiveRecord: 0.1ms | Allocations: 3087)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:03:28 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"ストアドプロシージャ", "explanation"=>"SQL命令文をまとめた命令群"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (13.0ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ストアドプロシージャ"], ["explanation", "SQL命令文をまとめた命令群"], ["count", nil], ["created_at", "2025-05-17 14:03:28.331575"], ["updated_at", "2025-05-17 14:03:28.331575"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 39ms (ActiveRecord: 13.4ms | Allocations: 2355)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:03:28 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 531)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 2578)
+Completed 200 OK in 36ms (Views: 32.4ms | ActiveRecord: 0.0ms | Allocations: 2845)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:03:47 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"バックアップファイル", "explanation"=>"定期的にとって破損に備える"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (11.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "バックアップファイル"], ["explanation", "定期的にとって破損に備える"], ["count", nil], ["created_at", "2025-05-17 14:03:47.174806"], ["updated_at", "2025-05-17 14:03:47.174806"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 31ms (ActiveRecord: 11.5ms | Allocations: 2370)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:03:47 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 534)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 2581)
+Completed 200 OK in 35ms (Views: 30.0ms | ActiveRecord: 0.0ms | Allocations: 2848)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:04:54 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"ジャーナルファイル", "explanation"=>"(=ログファイル)\r\nバックアップしてから次のバックアップを行うまでの履歴。\r\n更新前ジャーナル→トランザクション処理→更新後ジャーナル"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (10.9ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ジャーナルファイル"], ["explanation", "(=ログファイル)\r\nバックアップしてから次のバックアップを行うまでの履歴。\r\n更新前ジャーナル→トランザクション処理→更新後ジャーナル"], ["count", nil], ["created_at", "2025-05-17 14:04:55.153851"], ["updated_at", "2025-05-17 14:04:55.153851"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 27ms (ActiveRecord: 11.2ms | Allocations: 2376)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:04:55 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 2572)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 2839)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:05:37 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"コミット", "explanation"=>"トランザクション処理がきちんと終了したことを確認してから更新後ジャーナルに記録すること"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (7.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "コミット"], ["explanation", "トランザクション処理がきちんと終了したことを確認してから更新後ジャーナルに記録すること"], ["count", nil], ["created_at", "2025-05-17 14:05:37.461243"], ["updated_at", "2025-05-17 14:05:37.461243"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 32ms (ActiveRecord: 7.6ms | Allocations: 2363)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:05:37 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 567)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 2614)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 0.0ms | Allocations: 2881)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:06:42 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"ロールバック", "explanation"=>"トランザクション処理が途中でコケた際に更新前ジャーナルを使用して、処理開始前のデータベースに戻すこと"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (10.7ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ロールバック"], ["explanation", "トランザクション処理が途中でコケた際に更新前ジャーナルを使用して、処理開始前のデータベースに戻すこと"], ["count", nil], ["created_at", "2025-05-17 14:06:42.767347"], ["updated_at", "2025-05-17 14:06:42.767347"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 33ms (ActiveRecord: 11.0ms | Allocations: 2360)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:06:42 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 2584)
+Completed 200 OK in 36ms (Views: 30.9ms | ActiveRecord: 0.0ms | Allocations: 2851)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:07:48 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"ロールフォワード", "explanation"=>"更新後ジャーナルを作成後に障害などでデータが破損した際に、バックアップファイルと更新後ジャーナルを使用してデータベースを復元すること。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (11.5ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ロールフォワード"], ["explanation", "更新後ジャーナルを作成後に障害などでデータが破損した際に、バックアップファイルと更新後ジャーナルを使用してデータベースを復元すること。"], ["count", nil], ["created_at", "2025-05-17 14:07:48.896978"], ["updated_at", "2025-05-17 14:07:48.896978"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 31ms (ActiveRecord: 12.1ms | Allocations: 2355)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:07:48 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 2572)
+Completed 200 OK in 32ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 2839)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:08:49 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"分散データベース", "explanation"=>"複数のデータベースを見かけ上１つのデータベースとして扱うこと"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (7.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "分散データベース"], ["explanation", "複数のデータベースを見かけ上１つのデータベースとして扱うこと"], ["count", nil], ["created_at", "2025-05-17 14:08:50.090812"], ["updated_at", "2025-05-17 14:08:50.090812"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 32ms (ActiveRecord: 7.6ms | Allocations: 2361)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:08:50 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 528)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 2575)
+Completed 200 OK in 28ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 2842)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:10:02 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"２相コミット", "explanation"=>"分散データベースでトランザクション処理を実施する際に、すべてのデータベースでコミット可能かを確認してから処理する方法。コミット可能→処理実施。コミット不可→ロールバック"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (10.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "２相コミット"], ["explanation", "分散データベースでトランザクション処理を実施する際に、すべてのデータベースでコミット可能かを確認してから処理する方法。コミット可能→処理実施。コミット不可→ロールバック"], ["count", nil], ["created_at", "2025-05-17 14:10:02.890685"], ["updated_at", "2025-05-17 14:10:02.890685"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 45ms (ActiveRecord: 11.1ms | Allocations: 2354)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:10:02 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 528)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 2580)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 2848)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:10:30 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"【データベース操作】選択", "explanation"=>"行の抽出"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (3.5ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "【データベース操作】選択"], ["explanation", "行の抽出"], ["count", nil], ["created_at", "2025-05-17 14:10:30.630150"], ["updated_at", "2025-05-17 14:10:30.630150"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 31ms (ActiveRecord: 3.9ms | Allocations: 2357)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:10:30 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 531)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 2578)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 2845)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:10:59 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"【データベース操作】射影", "explanation"=>"列の抽出"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (6.7ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "【データベース操作】射影"], ["explanation", "列の抽出"], ["count", nil], ["created_at", "2025-05-17 14:10:59.753862"], ["updated_at", "2025-05-17 14:10:59.753862"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 25ms (ActiveRecord: 7.1ms | Allocations: 2363)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:10:59 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 2584)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 2851)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:11:24 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"【データベース操作】結合", "explanation"=>"複数のデータベースをくっつけて抽出"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (6.1ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "【データベース操作】結合"], ["explanation", "複数のデータベースをくっつけて抽出"], ["count", nil], ["created_at", "2025-05-17 14:11:24.890056"], ["updated_at", "2025-05-17 14:11:24.890056"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 28ms (ActiveRecord: 6.4ms | Allocations: 2361)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:11:24 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 516)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 2563)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 2830)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:12:37 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"教師あり学習", "explanation"=>"問題と正解を与えて関係性から学習させる。\r\n--学習済みモデルが作成され、特徴量(条件)を与えて答えを出力させることができる。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (7.0ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "教師あり学習"], ["explanation", "問題と正解を与えて関係性から学習させる。\r\n--学習済みモデルが作成され、特徴量(条件)を与えて答えを出力させることができる。"], ["count", nil], ["created_at", "2025-05-17 14:12:37.317869"], ["updated_at", "2025-05-17 14:12:37.317869"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 32ms (ActiveRecord: 8.7ms | Allocations: 2354)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:12:37 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 534)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 2581)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 2848)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:14:16 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"教師なし学習", "explanation"=>"正解は与えず、統計的な性質等でグルーピングや集約をさせる。--顧客データから買いそうなもので分類わけして、その分類に従ってセールスを行うなどの指標を出力させることができる。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (9.0ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "教師なし学習"], ["explanation", "正解は与えず、統計的な性質等でグルーピングや集約をさせる。--顧客データから買いそうなもので分類わけして、その分類に従ってセールスを行うなどの指標を出力させることができる。"], ["count", nil], ["created_at", "2025-05-17 14:14:16.821935"], ["updated_at", "2025-05-17 14:14:16.821935"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 37ms (ActiveRecord: 9.3ms | Allocations: 2360)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:14:16 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 564)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 2611)
+Completed 200 OK in 27ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 2878)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:15:25 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"強化学習", "explanation"=>"行動にポイントを振り分け、得点が高くなるような行動を学習させる。--囲碁など打つ手に報酬を用意し、良い手に高報酬を設定することで良い手を選ぶようにすることができる。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (12.6ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "強化学習"], ["explanation", "行動にポイントを振り分け、得点が高くなるような行動を学習させる。--囲碁など打つ手に報酬を用意し、良い手に高報酬を設定することで良い手を選ぶようにすることができる。"], ["count", nil], ["created_at", "2025-05-17 14:15:25.338211"], ["updated_at", "2025-05-17 14:15:25.338211"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 51ms (ActiveRecord: 12.9ms | Allocations: 2360)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:15:25 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 528)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 2575)
+Completed 200 OK in 40ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 2842)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:16:45 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"ディープラーニング", "explanation"=>"人間の脳の構造を模倣したニューラルネットワークを用いて実現される技術のこと。--言語化が難しい画像などの特徴量出力から、モデリングまでを一気通貫して行える。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (7.0ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ディープラーニング"], ["explanation", "人間の脳の構造を模倣したニューラルネットワークを用いて実現される技術のこと。--言語化が難しい画像などの特徴量出力から、モデリングまでを一気通貫して行える。"], ["count", nil], ["created_at", "2025-05-17 14:16:45.774674"], ["updated_at", "2025-05-17 14:16:45.774674"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 36ms (ActiveRecord: 7.7ms | Allocations: 2361)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:16:45 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 528)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 2575)
+Completed 200 OK in 34ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 2842)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:17:10 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"パケット", "explanation"=>"データを送信する際に細かくした塊の単位"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (13.0ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "パケット"], ["explanation", "データを送信する際に細かくした塊の単位"], ["count", nil], ["created_at", "2025-05-17 14:17:11.027683"], ["updated_at", "2025-05-17 14:17:11.027683"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 30ms (ActiveRecord: 13.3ms | Allocations: 2384)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:17:11 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 2587)
+Completed 200 OK in 25ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 2854)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:17:37 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"ヘッダ", "explanation"=>"パケット一つ一つにある宛先情報を付与している部分。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (11.5ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "ヘッダ"], ["explanation", "パケット一つ一つにある宛先情報を付与している部分。"], ["count", nil], ["created_at", "2025-05-17 14:17:38.155740"], ["updated_at", "2025-05-17 14:17:38.155740"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 27ms (ActiveRecord: 11.8ms | Allocations: 2369)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:17:38 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 2586)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 2853)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:18:24 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"伝送時間", "explanation"=>"データ容量、回線速度、伝送効率、回線利用率などから求められるデータを送るための時間"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (8.3ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "伝送時間"], ["explanation", "データ容量、回線速度、伝送効率、回線利用率などから求められるデータを送るための時間"], ["count", nil], ["created_at", "2025-05-17 14:18:24.734665"], ["updated_at", "2025-05-17 14:18:24.734665"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 36ms (ActiveRecord: 8.6ms | Allocations: 2354)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:18:24 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 549)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 2601)
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 2868)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:19:12 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"回線速度", "explanation"=>"bit per second(bit/秒)\r\n一秒あたりに送ることができるデータ量"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (9.2ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "回線速度"], ["explanation", "bit per second(bit/秒)\r\n一秒あたりに送ることができるデータ量"], ["count", nil], ["created_at", "2025-05-17 14:19:12.417620"], ["updated_at", "2025-05-17 14:19:12.417620"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 25ms (ActiveRecord: 9.5ms | Allocations: 2366)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:19:12 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 552)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 2599)
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 2866)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:20:08 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"回線利用率", "explanation"=>"実際に使用可能な回線の割合。回線速度は理論値。回線速度×回線利用率が実際の一秒間に送れるデータ量となる。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (13.5ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "回線利用率"], ["explanation", "実際に使用可能な回線の割合。回線速度は理論値。回線速度×回線利用率が実際の一秒間に送れるデータ量となる。"], ["count", nil], ["created_at", "2025-05-17 14:20:08.321263"], ["updated_at", "2025-05-17 14:20:08.321263"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 34ms (ActiveRecord: 13.7ms | Allocations: 2348)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:20:08 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 2593)
+Completed 200 OK in 25ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:20:49 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"LAN", "explanation"=>"Local Area Network。事業所などの狭い範囲"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (3.8ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "LAN"], ["explanation", "Local Area Network。事業所などの狭い範囲"], ["count", nil], ["created_at", "2025-05-17 14:20:49.537712"], ["updated_at", "2025-05-17 14:20:49.537712"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 31ms (ActiveRecord: 4.2ms | Allocations: 2342)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:20:49 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 534)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 2581)
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 2848)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:21:27 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"優先LAN", "explanation"=>"一般的なのが「イーサネット」。CSMA/CD方式で採用している。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (3.9ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "優先LAN"], ["explanation", "一般的なのが「イーサネット」。CSMA/CD方式で採用している。"], ["count", nil], ["created_at", "2025-05-17 14:21:27.286056"], ["updated_at", "2025-05-17 14:21:27.286056"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 30ms (ActiveRecord: 4.4ms | Allocations: 2354)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:21:27 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 537)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 2584)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 2851)
+
+
+Started GET "/words" for ::1 at 2025-05-17 23:21:31 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (1.8ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 3489)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 5707)
+Completed 200 OK in 48ms (Views: 43.5ms | ActiveRecord: 1.8ms | Allocations: 5971)
+
+
+Started GET "/words/82" for ::1 at 2025-05-17 23:21:35 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mWord Load (1.8ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 2295)
+Completed 200 OK in 35ms (Views: 19.6ms | ActiveRecord: 1.8ms | Allocations: 3077)
+
+
+Started GET "/words/82/edit" for ::1 at 2025-05-17 23:21:37 +0900
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering words/edit.html.erb within layouts/application
+  Rendered words/edit.html.erb within layouts/application (Duration: 6.7ms | Allocations: 986)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3024)
+Completed 200 OK in 36ms (Views: 19.7ms | ActiveRecord: 0.1ms | Allocations: 3865)
+
+
+Started PATCH "/words/82" for ::1 at 2025-05-17 23:21:46 +0900
+Processing by WordsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"有線LAN", "explanation"=>"一般的なのが「イーサネット」。CSMA/CD方式で採用している。"}, "commit"=>"更新する", "id"=>"82"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:26:in `update'
+  [1m[36mWord Update (7.4ms)[0m  [1m[33mUPDATE "words" SET "name" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["name", "有線LAN"], ["updated_at", "2025-05-17 14:21:46.329481"], ["id", 82]]
+  ↳ app/controllers/words_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:26:in `update'
+Redirected to http://localhost:3000/words/82
+Completed 302 Found in 37ms (ActiveRecord: 7.7ms | Allocations: 3251)
+
+
+Started GET "/words/82" for ::1 at 2025-05-17 23:21:46 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"82"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 2331)
+Completed 200 OK in 29ms (Views: 19.5ms | ActiveRecord: 0.1ms | Allocations: 3111)
+
+
+Started GET "/words" for ::1 at 2025-05-17 23:21:48 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 16.9ms | Allocations: 3489)
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 5733)
+Completed 200 OK in 50ms (Views: 45.4ms | ActiveRecord: 0.5ms | Allocations: 5997)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:25:31 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"CSMA/CD", "explanation"=>"ネットワークを監視して、空いているタイミングでデータを送る。それでもデータが衝突(コリジョン)した場合は、一定時間後に再送信する。"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (10.6ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "CSMA/CD"], ["explanation", "ネットワークを監視して、空いているタイミングでデータを送る。それでもデータが衝突(コリジョン)した場合は、一定時間後に再送信する。"], ["count", nil], ["created_at", "2025-05-17 14:25:31.761597"], ["updated_at", "2025-05-17 14:25:31.761597"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 33ms (ActiveRecord: 10.9ms | Allocations: 2366)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:25:31 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 531)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 2578)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 2845)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:26:39 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"無線LAN", "explanation"=>"一般的なのはWI-FI。利便性が高いが、電波盗聴の危険性がありセキュリティ対策が必要"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (6.5ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "無線LAN"], ["explanation", "一般的なのはWI-FI。利便性が高いが、電波盗聴の危険性がありセキュリティ対策が必要"], ["count", nil], ["created_at", "2025-05-17 14:26:39.707001"], ["updated_at", "2025-05-17 14:26:39.707001"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 29ms (ActiveRecord: 6.8ms | Allocations: 2366)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:26:39 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 567)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 2614)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.0ms | Allocations: 2881)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:27:25 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"WAN", "explanation"=>"Wide Area Network。LANより広い範囲(厳密な広さの定義なし)"}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (7.1ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "WAN"], ["explanation", "Wide Area Network。LANより広い範囲(厳密な広さの定義なし)"], ["count", nil], ["created_at", "2025-05-17 14:27:25.402158"], ["updated_at", "2025-05-17 14:27:25.402158"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 26ms (ActiveRecord: 7.5ms | Allocations: 2348)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:27:25 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 531)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 2578)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 2845)
+
+
+Started POST "/words" for ::1 at 2025-05-17 23:27:43 +0900
+Processing by WordsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"プロトコル", "explanation"=>""}, "commit"=>"登録する"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mWord Create (6.6ms)[0m  [1m[32mINSERT INTO "words" ("name", "explanation", "count", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "プロトコル"], ["explanation", ""], ["count", nil], ["created_at", "2025-05-17 14:27:44.070665"], ["updated_at", "2025-05-17 14:27:44.070665"]]
+  ↳ app/controllers/words_controller.rb:35:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:35:in `create'
+Redirected to http://localhost:3000/words/new
+Completed 302 Found in 28ms (ActiveRecord: 6.9ms | Allocations: 2362)
+
+
+Started GET "/words/new" for ::1 at 2025-05-17 23:27:44 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 546)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 2593)
+Completed 200 OK in 32ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+Started GET "/words" for ::1 at 2025-05-17 23:27:49 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.9ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 3627)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 5845)
+Completed 200 OK in 59ms (Views: 45.6ms | ActiveRecord: 0.9ms | Allocations: 6109)
+
+
+Started GET "/words/86" for ::1 at 2025-05-17 23:27:53 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 2300)
+Completed 200 OK in 40ms (Views: 22.3ms | ActiveRecord: 0.1ms | Allocations: 3080)
+
+
+Started GET "/words/86/edit" for ::1 at 2025-05-17 23:27:54 +0900
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering words/edit.html.erb within layouts/application
+  Rendered words/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 570)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 2608)
+Completed 200 OK in 31ms (Views: 20.5ms | ActiveRecord: 0.1ms | Allocations: 3388)
+
+
+Started PATCH "/words/86" for ::1 at 2025-05-17 23:28:07 +0900
+Processing by WordsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "word"=>{"name"=>"プロトコル", "explanation"=>"データを送受信するためのルール"}, "commit"=>"更新する", "id"=>"86"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:25:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/words_controller.rb:26:in `update'
+  [1m[36mWord Update (4.7ms)[0m  [1m[33mUPDATE "words" SET "explanation" = ?, "updated_at" = ? WHERE "words"."id" = ?[0m  [["explanation", "データを送受信するためのルール"], ["updated_at", "2025-05-17 14:28:08.170521"], ["id", 86]]
+  ↳ app/controllers/words_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/words_controller.rb:26:in `update'
+Redirected to http://localhost:3000/words/86
+Completed 302 Found in 39ms (ActiveRecord: 5.1ms | Allocations: 2975)
+
+
+Started GET "/words/86" for ::1 at 2025-05-17 23:28:08 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"86"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 2349)
+Completed 200 OK in 34ms (Views: 23.5ms | ActiveRecord: 0.2ms | Allocations: 3129)
+
+
+Started GET "/words" for ::1 at 2025-05-17 23:28:10 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 3627)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 5863)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 0.5ms | Allocations: 6127)
+
+
+Started GET "/words/new" for ::1 at 2025-05-19 20:06:20 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1049)
+  Rendered layout layouts/application.html.erb (Duration: 452.5ms | Allocations: 8903)
+Completed 200 OK in 637ms (Views: 522.5ms | ActiveRecord: 0.0ms | Allocations: 13309)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:06:23 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:06:45 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 578)
+  Rendered layout layouts/application.html.erb (Duration: 92.0ms | Allocations: 6917)
+Completed 200 OK in 123ms (Views: 120.8ms | ActiveRecord: 0.0ms | Allocations: 7233)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:06:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:08:43 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1032)
+  Rendered layout layouts/application.html.erb (Duration: 168.0ms | Allocations: 7850)
+Completed 200 OK in 267ms (Views: 180.6ms | ActiveRecord: 7.0ms | Allocations: 12985)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:08:46 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:09:52 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 503)
+  Rendered layout layouts/application.html.erb (Duration: 128.0ms | Allocations: 6750)
+Completed 200 OK in 136ms (Views: 132.8ms | ActiveRecord: 0.0ms | Allocations: 7046)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:09:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:10:09 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 512)
+  Rendered layout layouts/application.html.erb (Duration: 117.0ms | Allocations: 6762)
+Completed 200 OK in 131ms (Views: 126.5ms | ActiveRecord: 0.0ms | Allocations: 7030)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:10:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:11:06 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 503)
+  Rendered layout layouts/application.html.erb (Duration: 121.6ms | Allocations: 6746)
+Completed 200 OK in 131ms (Views: 128.5ms | ActiveRecord: 0.0ms | Allocations: 7014)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:11:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:11:29 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 512)
+  Rendered layout layouts/application.html.erb (Duration: 126.9ms | Allocations: 6755)
+Completed 200 OK in 139ms (Views: 133.4ms | ActiveRecord: 0.0ms | Allocations: 7023)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:11:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:11:43 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1019)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 3739)
+Completed 200 OK in 76ms (Views: 34.3ms | ActiveRecord: 8.3ms | Allocations: 8874)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:11:47 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:13:17 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 530)
+  Rendered layout layouts/application.html.erb (Duration: 98.3ms | Allocations: 6874)
+Completed 200 OK in 117ms (Views: 114.7ms | ActiveRecord: 0.0ms | Allocations: 7169)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:13:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words" for ::1 at 2025-05-19 20:13:34 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (1.9ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:5
+  Rendered words/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 3952)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 6383)
+Completed 200 OK in 70ms (Views: 33.4ms | ActiveRecord: 1.8ms | Allocations: 6763)
+
+
+Started GET "/words" for ::1 at 2025-05-19 20:18:33 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:11
+  Rendered words/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 7375)
+  Rendered layout layouts/application.html.erb (Duration: 152.5ms | Allocations: 15548)
+Completed 200 OK in 208ms (Views: 159.8ms | ActiveRecord: 7.3ms | Allocations: 17374)
+
+
+Started GET "/stylesheets/index.css" for ::1 at 2025-05-19 20:18:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/index.css"):
+  
+Started GET "/words" for ::1 at 2025-05-19 20:19:18 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.8ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:11
+  Rendered words/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 7377)
+  Rendered layout layouts/application.html.erb (Duration: 207.6ms | Allocations: 15552)
+Completed 200 OK in 235ms (Views: 218.0ms | ActiveRecord: 5.3ms | Allocations: 17379)
+
+
+Started GET "/stylesheets/index.css" for ::1 at 2025-05-19 20:19:20 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/index.css"):
+  
+Started GET "/words" for ::1 at 2025-05-19 20:19:42 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:11
+  Rendered words/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 3628)
+  Rendered layout layouts/application.html.erb (Duration: 186.5ms | Allocations: 11112)
+Completed 200 OK in 199ms (Views: 190.8ms | ActiveRecord: 0.5ms | Allocations: 11399)
+
+
+Started GET "/stylesheets/index.css" for ::1 at 2025-05-19 20:19:43 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/index.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:19:48 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 2882)
+Completed 200 OK in 90ms (Views: 26.7ms | ActiveRecord: 0.3ms | Allocations: 4423)
+
+
+Started GET "/words/1" for ::1 at 2025-05-19 20:21:10 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 381)
+  Rendered layout layouts/application.html.erb (Duration: 189.6ms | Allocations: 9661)
+Completed 200 OK in 265ms (Views: 203.3ms | ActiveRecord: 7.4ms | Allocations: 16095)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:21:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1/edit" for ::1 at 2025-05-19 20:21:48 +0900
+Processing by WordsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:21:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering words/edit.html.erb within layouts/application
+  Rendered words/edit.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1045)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 3653)
+Completed 200 OK in 151ms (Views: 68.7ms | ActiveRecord: 0.2ms | Allocations: 4574)
+
+
+Started GET "/words/1" for ::1 at 2025-05-19 20:21:54 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (4.9ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 2867)
+Completed 200 OK in 33ms (Views: 20.7ms | ActiveRecord: 4.9ms | Allocations: 3649)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:21:55 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:23:04 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 386)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3745)
+Completed 200 OK in 90ms (Views: 25.6ms | ActiveRecord: 6.2ms | Allocations: 10178)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:23:07 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:23:21 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 388)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3753)
+Completed 200 OK in 81ms (Views: 22.9ms | ActiveRecord: 6.6ms | Allocations: 10187)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:23:23 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:23:56 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 120.2ms | Allocations: 8750)
+Completed 200 OK in 137ms (Views: 127.4ms | ActiveRecord: 0.1ms | Allocations: 9613)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:23:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:24:06 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 125.5ms | Allocations: 8663)
+Completed 200 OK in 143ms (Views: 133.4ms | ActiveRecord: 0.2ms | Allocations: 9444)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:24:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:24:15 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 178.4ms | Allocations: 8684)
+Completed 200 OK in 188ms (Views: 183.2ms | ActiveRecord: 0.1ms | Allocations: 9465)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:24:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:26:42 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 2908)
+Completed 200 OK in 41ms (Views: 31.9ms | ActiveRecord: 0.1ms | Allocations: 3689)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:26:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:28:13 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 2941)
+Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 0.1ms | Allocations: 3722)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:28:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:30:52 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 85.8ms | Allocations: 8684)
+Completed 200 OK in 104ms (Views: 97.1ms | ActiveRecord: 0.1ms | Allocations: 9465)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:30:52 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words" for ::1 at 2025-05-19 20:30:58 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.7ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:11
+  Rendered words/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 3874)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 6663)
+Completed 200 OK in 51ms (Views: 41.6ms | ActiveRecord: 0.6ms | Allocations: 6988)
+
+
+Started GET "/stylesheets/index.css" for ::1 at 2025-05-19 20:30:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/index.css"):
+  
+Started GET "/words/search" for ::1 at 2025-05-19 20:31:04 +0900
+Processing by WordsController#search as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/search.html.erb within layouts/application
+  Rendered words/search.html.erb within layouts/application (Duration: 3.9ms | Allocations: 991)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 3792)
+Completed 200 OK in 74ms (Views: 26.3ms | ActiveRecord: 0.0ms | Allocations: 4107)
+
+
+Started GET "/words" for ::1 at 2025-05-19 20:31:06 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.5ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:11
+  Rendered words/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 3627)
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 6412)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 0.5ms | Allocations: 6676)
+
+
+Started GET "/stylesheets/index.css" for ::1 at 2025-05-19 20:31:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/index.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:31:07 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 807)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 3418)
+Completed 200 OK in 39ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 3756)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:31:08 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words/new" for ::1 at 2025-05-19 20:31:55 +0900
+Processing by WordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/new.html.erb within layouts/application
+  Rendered words/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1013)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 4107)
+Completed 200 OK in 59ms (Views: 23.3ms | ActiveRecord: 5.0ms | Allocations: 9259)
+
+
+Started GET "/stylesheets/new.css" for ::1 at 2025-05-19 20:31:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/new.css"):
+  
+Started GET "/words" for ::1 at 2025-05-19 20:31:59 +0900
+Processing by WordsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering words/index.html.erb within layouts/application
+  [1m[36mWord Load (0.7ms)[0m  [1m[34mSELECT "words".* FROM "words"[0m
+  ↳ app/views/words/index.html.erb:11
+  Rendered words/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 3960)
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 6781)
+Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 0.6ms | Allocations: 7180)
+
+
+Started GET "/stylesheets/index.css" for ::1 at 2025-05-19 20:31:59 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/index.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:32:01 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 3080)
+Completed 200 OK in 81ms (Views: 19.5ms | ActiveRecord: 0.3ms | Allocations: 4618)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:32:01 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:32:25 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 168.4ms | Allocations: 8809)
+Completed 200 OK in 185ms (Views: 180.7ms | ActiveRecord: 0.1ms | Allocations: 9590)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:32:25 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:32:32 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 2866)
+Completed 200 OK in 31ms (Views: 19.5ms | ActiveRecord: 0.2ms | Allocations: 3647)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:32:32 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:33:40 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 170.1ms | Allocations: 8682)
+Completed 200 OK in 183ms (Views: 174.2ms | ActiveRecord: 0.3ms | Allocations: 9463)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:33:40 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:34:24 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 164.7ms | Allocations: 8685)
+Completed 200 OK in 181ms (Views: 171.1ms | ActiveRecord: 0.1ms | Allocations: 9466)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:34:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:34:50 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 121.9ms | Allocations: 8671)
+Completed 200 OK in 136ms (Views: 131.0ms | ActiveRecord: 0.1ms | Allocations: 9452)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:34:50 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:41:12 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (4.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 393)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3745)
+Completed 200 OK in 121ms (Views: 27.5ms | ActiveRecord: 7.4ms | Allocations: 9698)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:41:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:42:59 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 198.9ms | Allocations: 8775)
+Completed 200 OK in 217ms (Views: 205.5ms | ActiveRecord: 0.2ms | Allocations: 9638)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:42:59 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:43:06 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 390)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 3745)
+Completed 200 OK in 49ms (Views: 23.9ms | ActiveRecord: 9.5ms | Allocations: 10179)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:43:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:43:31 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 390)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3756)
+Completed 200 OK in 88ms (Views: 20.6ms | ActiveRecord: 5.2ms | Allocations: 10126)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:43:33 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:46:05 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.4ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 397)
+  Rendered layout layouts/application.html.erb (Duration: 155.7ms | Allocations: 9692)
+Completed 200 OK in 284ms (Views: 174.0ms | ActiveRecord: 15.9ms | Allocations: 16130)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:46:08 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:47:35 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 148.1ms | Allocations: 8676)
+Completed 200 OK in 163ms (Views: 152.8ms | ActiveRecord: 0.1ms | Allocations: 9539)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:47:36 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:48:12 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.1ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 120.5ms | Allocations: 8687)
+Completed 200 OK in 136ms (Views: 130.8ms | ActiveRecord: 0.1ms | Allocations: 9467)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:48:12 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:49:15 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.3ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 395)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 3765)
+Completed 200 OK in 125ms (Views: 40.1ms | ActiveRecord: 22.2ms | Allocations: 10198)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:49:17 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
+Started GET "/words/1" for ::1 at 2025-05-19 20:49:28 +0900
+Processing by WordsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWord Load (0.2ms)[0m  [1m[34mSELECT "words".* FROM "words" WHERE "words"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/words_controller.rb:17:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering words/show.html.erb within layouts/application
+  Rendered words/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 3752)
+Completed 200 OK in 144ms (Views: 72.8ms | ActiveRecord: 5.1ms | Allocations: 10147)
+
+
+Started GET "/stylesheets/show.css" for ::1 at 2025-05-19 20:49:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/stylesheets/show.css"):
+  
